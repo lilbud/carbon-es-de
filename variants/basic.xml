@@ -1,0 +1,10 @@
+<theme>
+    <variant name="Basic">
+        <view name="gamelist">
+            <textlist name="gamelist">
+                <size>0.95 0.73</size>
+                <horizontalAlignment>center</horizontalAlignment>
+            </textlist>
+        </view>
+    </variant>
+</theme>

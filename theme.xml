@@ -1,0 +1,212 @@
+<theme>
+	<include>./variables.xml</include>
+
+	<variables>
+		<fontPath>./assets/fonts/Cabin-Bold.ttf</fontPath>
+		<scrollSound>./assets/sounds/scroll.wav</scrollSound>
+		<systemLogo>./assets/img/system_logos/${system.theme}.svg</systemLogo>
+	</variables>
+
+	<variant name="Basic">
+		<include>./variants/basic.xml</include>
+	</variant>
+
+	<variant name="Detailed">
+		<include>./variants/detailed.xml</include>
+	</variant>
+
+	<variant name="Video">
+		<include>./variants/video.xml</include>
+	</variant>
+
+	<view name="all">
+		<sound name="scroll">
+			<path>${scrollSound}</path>
+		</sound>
+	</view>
+
+	<view name="system,gamelist">
+		<image name="background">
+			<tile>true</tile>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<path>./assets/img/carbon_fiber.png</path>
+			<zIndex>0</zIndex>
+		</image>
+
+		<helpsystem name="help">
+			<textColor>7d7d7d</textColor>
+			<iconColor>7d7d7d</iconColor>
+		</helpsystem>
+
+		<image name="BottomBar">
+			<tile>false</tile>
+			<size>1 0.065</size>
+			<pos>0 1</pos>
+			<origin>0 1</origin>
+			<path>./assets/img/bottom.png</path>
+			<color>${mainColor}c0</color>
+			<zIndex>51</zIndex>
+		</image>
+	</view>
+
+	<view name="system">
+		<image name="CenterFade">
+			<tile>false</tile>
+			<size>1 0.5</size>
+			<pos>0.5 0.5</pos>
+			<origin>0.5 0.5</origin>
+			<path>./assets/img/centerfade.png</path>
+			<color>${mainColor}50</color>
+			<zIndex>49</zIndex>
+		</image>
+
+		<image name="ControllerOverlay">
+			<tile>false</tile>
+			<pos>0.5 0.2</pos>
+			<origin>0.5 0.5</origin>
+			<color>${mainColor}</color>
+			<size>0.3 0</size>
+			<path>./assets/img/controllers/${system.theme}.svg</path>
+		</image>
+
+		<carousel name="systemCarousel">
+			<type>horizontal</type>
+			<staticImage>${systemLogo}</staticImage>
+			<imageColor>${mainColor}</imageColor>
+			<imageInterpolation>linear</imageInterpolation>
+			<unfocusedItemOpacity>0.5</unfocusedItemOpacity>
+			<pos>0 0.383796</pos>
+			<size>1 0.232407</size>
+			<fontSize>0.055</fontSize>
+		</carousel>
+
+		<text name="gameCounter">
+			<origin>0.5 0.5</origin>
+			<pos>0.5 0.6437</pos>
+			<size>1 0.056</size>
+			<systemdata>gamecount</systemdata>
+			<fontSize>0.035</fontSize>
+			<horizontalAlignment>center</horizontalAlignment>
+			<backgroundColor>FFFFFFBB</backgroundColor>
+			<letterCase>uppercase</letterCase>
+			<zIndex>51</zIndex>
+		</text>
+	</view>
+
+	<variant name="Basic, Detailed, Video">
+		<view name="gamelist">
+			<textlist name="gamelist">
+				<selectorColor>${selectorColor}</selectorColor>
+				<selectedColor>${mainColor}</selectedColor>
+				<primaryColor>${primaryColor}</primaryColor>
+				<secondaryColor>${secondaryColor}</secondaryColor>
+				<fontPath>${fontPath}</fontPath>
+				<horizontalMargin>0.01</horizontalMargin>
+				<fontSize>0.03</fontSize>
+				<pos>0.025 0.18</pos>
+				<scrollSound>./assets/scroll.wav</scrollSound>
+			</textlist>
+
+			<image name="top">
+				<pos>0 0</pos>
+				<origin>0 0</origin>
+				<size>1 0.16</size>
+				<path>./assets/img/top.png</path>
+				<color>${mainColor}</color>
+				<zIndex>51</zIndex>
+			</image>
+
+			<image name="logo">
+				<path>${systemLogo}</path>
+				<color>${mainColor}</color>
+				<pos>0.266 0.08</pos>
+				<maxSize>0.460 0.126</maxSize>
+				<origin>0.5 0.5</origin>
+				<zIndex>52</zIndex>
+			</image>
+
+			<image name="logo2">
+				<path>./assets/img/controllers/${system.theme}.svg</path>
+				<pos>0.874 0.08</pos>
+				<maxSize>0.460 0.126</maxSize>
+				<origin>0.5 0.5</origin>
+				<color>${primaryColor}</color>
+				<zIndex>52</zIndex>
+			</image>
+		</view>
+	</variant>
+
+	<variant name="Detailed, Video">
+		<view name="gamelist">
+			<text
+				name="md_lbl_genre, md_genre, md_lbl_developer, md_developer, md_lbl_players, md_players, md_lbl_releasedate, md_description">
+				<color>${primaryColor}</color>
+				<fontPath>${fontPath}</fontPath>
+				<letterCase>none</letterCase>
+				<fontSize>0.023</fontSize>
+				<zIndex>2</zIndex>
+				<defaultValue>:space:</defaultValue>
+			</text>
+
+			<text name="md_lbl_releasedate">
+				<text>Release Date:</text>
+				<pos>0.53 0.63</pos>
+			</text>
+
+			<datetime name="md_releasedate">
+				<metadata>releasedate</metadata>
+				<pos>0.615 0.63</pos>
+				<color>${primaryColor}</color>
+				<letterCase>lowercase</letterCase>
+				<fontPath>${fontPath}</fontPath>
+				<fontSize>0.023</fontSize>
+				<zIndex>2</zIndex>
+				<defaultValue>:space:</defaultValue>
+			</datetime>
+
+			<text name="md_lbl_genre">
+				<text>Genre:</text>
+				<pos>0.53 0.66</pos>
+			</text>
+
+			<text name="md_genre">
+				<metadata>genre</metadata>
+				<pos>0.575 0.66</pos>
+			</text>
+
+			<text name="md_lbl_developer">
+				<text>Developer:</text>
+				<pos>0.53 0.69</pos>
+			</text>
+
+			<text name="md_developer">
+				<metadata>developer</metadata>
+				<pos>0.6 0.69</pos>
+				<size>0 0.033</size>
+			</text>
+
+			<text name="md_lbl_players">
+				<text>Players:</text>
+				<pos>0.91 0.63</pos>
+			</text>
+
+			<text name="md_players">
+				<metadata>players</metadata>
+				<pos>0.96 0.63</pos>
+			</text>
+
+			<text name="md_description">
+				<metadata>description</metadata>
+				<size>0.467 0.16</size>
+				<pos>0.530 0.746</pos>
+			</text>
+
+			<textlist name="gamelist">
+				<size>0.489 0.754</size>
+				<horizontalAlignment>left</horizontalAlignment>
+			</textlist>
+		</view>
+	</variant>
+</theme>
