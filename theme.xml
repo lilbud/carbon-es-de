@@ -106,7 +106,7 @@
 				<horizontalMargin>0.01</horizontalMargin>
 				<fontSize>0.03</fontSize>
 				<pos>0.025 0.18</pos>
-				<scrollSound>./assets/scroll.wav</scrollSound>
+				<scrollSound>${scrollSound}</scrollSound>
 			</textlist>
 
 			<image name="top">
