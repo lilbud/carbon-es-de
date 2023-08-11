@@ -11,8 +11,8 @@
     </colorScheme>
 
 	<colorScheme name="green">
-        <label>Green</label>
-    </colorScheme>
+	    <label>Green</label>
+	</colorScheme>
 
 	<colorScheme name="yellow">
         <label>Yellow</label>
@@ -38,7 +38,7 @@
 		<label>Video</label>
 		<selectable>false</selectable>
 		<override>
-			<trigger>noVideo</trigger>
+			<trigger>noVideos</trigger>
 			<useVariant>Detailed</useVariant>
 		</override>
 	</variant>
