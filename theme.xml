@@ -206,6 +206,29 @@
 				<size>0.489 0.754</size>
 				<horizontalAlignment>left</horizontalAlignment>
 			</textlist>
+			
+			<badges name="badges">
+				<origin>0 0</origin>
+				<pos>0.96 0.66</pos>
+				<size>0.291666666666667 0.02962962962963</size>
+				<itemMargin>0.005208333333333 -1</itemMargin>
+				<lines>1</lines>
+				<itemsPerLine>9</itemsPerLine>
+				<slots>all</slots>
+				<customBadgeIcon badge="folder">./assets/img/badges/badge-folder.svg</customBadgeIcon>
+				<customBadgeIcon badge="broken">./assets/img/badges/badge-broken.svg</customBadgeIcon>
+				<customBadgeIcon badge="completed">./assets/img/badges/badge-completed.svg</customBadgeIcon>
+				<customBadgeIcon badge="favorite">./assets/img/badges/badge-favorite.svg</customBadgeIcon>
+				<customBadgeIcon badge="kidgame">./assets/img/badges/badge-kidgame.svg</customBadgeIcon>
+				<customBadgeIcon badge="collection">./assets/img/badges/badge-collection.svg</customBadgeIcon>
+				<customBadgeIcon badge="controller">./assets/img/badges/badge-controller.svg</customBadgeIcon>
+				<customBadgeIcon badge="altemulator">./assets/img/badges/badge-altemulator.svg</customBadgeIcon>
+				<customBadgeIcon badge="manual">./assets/img/badges/badge-manual.svg</customBadgeIcon>
+				<badgeIconColor>${mainColor}c0</badgeIconColor>
+				<controllerSize>0.8</controllerSize>
+				<folderLinkSize>0.8</folderLinkSize>
+				<horizontalAlignment>center</horizontalAlignment>
+			</badges>
 		</view>
 	</variant>
 </theme>
