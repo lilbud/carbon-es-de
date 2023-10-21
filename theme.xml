@@ -139,8 +139,7 @@
 
 	<variant name="Detailed, Video">
 		<view name="gamelist">
-			<text
-				name="md_lbl_genre, md_genre, md_lbl_developer, md_developer, md_lbl_players, md_players, md_lbl_releasedate, md_description">
+			<text name="md_lbl_genre, md_genre, md_lbl_developer, md_developer, md_lbl_players, md_players, md_lbl_releasedate, md_description">
 				<color>${primaryColor}</color>
 				<fontPath>${fontPath}</fontPath>
 				<letterCase>none</letterCase>
@@ -208,9 +207,9 @@
 			</textlist>
 			
 			<badges name="badges">
-				<origin>0 0</origin>
-				<pos>0.96 0.66</pos>
-				<size>0.291666666666667 0.02962962962963</size>
+				<origin>1 0</origin>
+				<pos>0.953 0.665</pos>
+				<size>0.23 0.02962962962963</size>
 				<itemMargin>0.005208333333333 -1</itemMargin>
 				<lines>1</lines>
 				<itemsPerLine>9</itemsPerLine>
@@ -227,7 +226,7 @@
 				<badgeIconColor>${mainColor}c0</badgeIconColor>
 				<controllerSize>0.8</controllerSize>
 				<folderLinkSize>0.8</folderLinkSize>
-				<horizontalAlignment>center</horizontalAlignment>
+				<horizontalAlignment>right</horizontalAlignment>
 			</badges>
 		</view>
 	</variant>
