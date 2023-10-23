@@ -3,59 +3,60 @@
 	<themeName>Carbon</themeName>
 
 	<colorScheme name="red">
-        <label>Red</label>
-    </colorScheme>
+		<label>Red</label>
+	</colorScheme>
 
 	<colorScheme name="blue">
-        <label>Blue</label>
-    </colorScheme>
+	        <label>Blue</label>
+	</colorScheme>
 
 	<colorScheme name="green">
 	    <label>Green</label>
 	</colorScheme>
 
 	<colorScheme name="yellow">
-        <label>Yellow</label>
-    </colorScheme>
+        	<label>Yellow</label>
+    	</colorScheme>
 
 	<colorScheme name="orange">
-        <label>Orange</label>
-    </colorScheme>
+        	<label>Orange</label>
+    	</colorScheme>
 
 	<colorScheme name="purple">
-        <label>Purple</label>
-    </colorScheme>
+        	<label>Purple</label>
+    	</colorScheme>
 
 	<colorScheme name="teal">
-        <label>Teal</label>
-    </colorScheme>
+        	<label>Teal</label>
+    	</colorScheme>
 
 	<colorScheme name="pink">
-        <label>Pink</label>
-    </colorScheme>
+        	<label>Pink</label>
+   	</colorScheme>
 
 	<variant name="Video">
-		<label>Video</label>
-		<selectable>false</selectable>
-		<override>
-			<trigger>noVideos</trigger>
-			<useVariant>Detailed</useVariant>
+	    <label>Video</label>
+	    <selectable>false</selectable>
+	    <override>
+	        <trigger>noVideos</trigger>
+	        <useVariant>Detailed</useVariant>
+	    </override>
+	    <override>
+	        <trigger>noMedia</trigger>
+	        <mediaType>miximage, marquee, screenshot, titlescreen, cover, backcover, 3dbox, physicalmedia, fanart, video</mediaType>
+	        <useVariant>Basic</useVariant>
 		</override>
+
 	</variant>
 
 	<variant name="Detailed">
-		<label>Detailed</label>
-		<selectable>false</selectable>
-		<override>
-			<trigger>noMedia</trigger>
-			<mediaType>miximage, marquee, screenshot, titlescreen, cover, backcover, 3dbox, physicalmedia, fanart</mediaType>
-			<useVariant>Basic</useVariant>
-		</override>
+	    <label>Detailed</label>
+	    <selectable>false</selectable>
 	</variant>
 
 	<variant name="Basic">
-		<label>Basic</label>
-		<selectable>false</selectable>
+	    <label>Basic</label>
+	    <selectable>false</selectable>
 	</variant>
 
 	<transitions name="transitions">
