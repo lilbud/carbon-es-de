@@ -48,6 +48,7 @@ jobs:
         run: |
           rm -rf ./system-logos
           rm -rf ./system-controllers-outline
+          rm -rf ./assets/colors
 
       - name: Commit
         run: |
