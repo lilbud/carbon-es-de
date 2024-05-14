@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Grab Latest Assets
 
 # Controls when the workflow will run
@@ -10,10 +8,15 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+# Uncomment the different lines based on what your theme needs asset-wise.
+# MAKE SURE TO CHANGE THE PATH LISTED TO MATCH YOUR THEME'S STRUCTURE
+
 env:
-  LogoDir: ./assets/img/system_logos
+  WhiteLogoDir: ./assets/img/system_logos
+  #ColorLogoDir: [YOUR COLOR LOGO DIR HERE]
   ControllerDir: ./assets/img/controllers
-  
+  #MetadataDir [YOUR SYSTEM METADATA DIR HERE]
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   update-assets:
@@ -32,23 +35,33 @@ jobs:
       # Clones newest system-controllers from the Gitlab Repo
       - name: grab controller outlines
         run: git clone "https://gitlab.com/es-de/themes/system-controllers-outline.git"
+        
+      # Clones newest system-metadata from the Gitlab Repo
+      #- name: grab controller outlines
+      #  run: git clone "https://gitlab.com/es-de/themes/system-metadata.git"
           
-      # copy logos to proper folders
-      - name: copy logos
-        run: |
-          cp -r ./system-logos/system-logo-white/. $LogoDir
-      
-      # copy controllers to proper folders
+      # copy white logos to proper folders if needed
+      - name: copy white logos
+        run: cp -r ./system-logos/system-logo-white/. $WhiteLogoDir
+          
+      # copy color logos to proper folders if needed
+      # - name: copy color logos
+      #   run: cp -r ./system-logos/system-logo-color/. $ColorLogoDir
+
+      # copy controllers to proper folders if needed
       - name: copy controllers
-        run: |
-          cp -r ./system-controllers-outline/. $ControllerDir
+        run: cp -r ./system-controllers-outline/. $ControllerDir
+      
+      # copy metadata to proper folders if needed
+      # - name: copy metadata
+      #   run: cp -r ./system-metadata/. $MetadataDir
 
       # remove cloned folders
       - name: remove clones
         run: |
           rm -rf ./system-logos
           rm -rf ./system-controllers-outline
-          rm -rf ./assets/colors
+          rm -rf ./system-metadata
 
       - name: Commit
         run: |
