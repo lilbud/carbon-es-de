@@ -11,9 +11,8 @@ on:
   workflow_dispatch:
 
 env:
-  WhiteLogoDir: ./assets/gamelist_logos
-  ColorLogoDir: ./assets/system_logos
-  MetadataDir: ./assets/colors
+  LogoDir: ./assets/img/system_logos
+  ControllerDir: ./assets/img/controllers
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -26,30 +25,29 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
-      # Clones newest logos from the Gitlab Repo and copies to proper folders
+      # Clones newest logos from the Gitlab Repo
       - name: grab new logos
         run: git clone "https://gitlab.com/es-de/themes/system-logos.git"
 
-      # Clones newest system-metadata from the Gitlab Repo and copy to proper folder
-      - name: grab new metadata
-        run: git clone "https://gitlab.com/es-de/themes/system-metadata.git"
+      # Clones newest system-controllers from the Gitlab Repo
+      - name: grab controller outlines
+        run: git clone "https://gitlab.com/es-de/themes/system-controllers-outline.git"
           
       # copy logos to proper folders
       - name: copy logos
         run: |
-          cp -r ./system-logos/system-logo-white/. $WhiteLogoDir
-          cp -r ./system-logos/system-logo-color/. $ColorLogoDir
-
-      # copy metadata
-      - name: copy metadata
+          cp -r ./system-logos/system-logo-white/. $LogoDir
+      
+      # copy controllers to proper folders
+      - name: copy controllers
         run: |
-          cp -r ./system-metadata/. $MetadataDir
+          cp -r ./system-controllers-outline/. $ControllerDir
 
       # remove cloned folders
       - name: remove clones
         run: |
           rm -rf ./system-logos
-          rm -rf ./system-metadata
+          rm -rf ./system-controllers-outline
 
       - name: Commit
         run: |
