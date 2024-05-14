@@ -1,0 +1,62 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Grab Latest Assets
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  WhiteLogoDir: ./assets/gamelist_logos
+  ColorLogoDir: ./assets/system_logos
+  MetadataDir: ./assets/colors
+  
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  update-assets:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Clones newest logos from the Gitlab Repo and copies to proper folders
+      - name: grab new logos
+        run: git clone "https://gitlab.com/es-de/themes/system-logos.git"
+
+      # Clones newest system-metadata from the Gitlab Repo and copy to proper folder
+      - name: grab new metadata
+        run: git clone "https://gitlab.com/es-de/themes/system-metadata.git"
+          
+      # copy logos to proper folders
+      - name: copy logos
+        run: |
+          cp -r ./system-logos/system-logo-white/. $WhiteLogoDir
+          cp -r ./system-logos/system-logo-color/. $ColorLogoDir
+
+      # copy metadata
+      - name: copy metadata
+        run: |
+          cp -r ./system-metadata/. $MetadataDir
+
+      # remove cloned folders
+      - name: remove clones
+        run: |
+          rm -rf ./system-logos
+          rm -rf ./system-metadata
+
+      - name: Commit
+        run: |
+          git config --local user.name "${GITHUB_ACTOR}"
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add .
+          git commit -am "Auto updated theme with new logos" || echo "No changes to commit"
+      - name: Push
+        run: |
+          git push origin main
