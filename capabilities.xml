@@ -2,6 +2,9 @@
 
 	<themeName>Carbon</themeName>
 
+	<fontSize>medium</fontSize>
+    	<fontSize>large</fontSize>
+
 	<colorScheme name="red">
 		<label>Red</label>
 	</colorScheme>
