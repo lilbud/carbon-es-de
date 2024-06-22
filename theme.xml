@@ -3,7 +3,7 @@
 
 	<fontSize name="medium">
 		<variables>
-			<systemCarouselfontSize>0.055</systemCarouselFontSize>
+			<systemCarouselFontSize>0.055</systemCarouselFontSize>
 			<gameCounterFontSize>0.035</gameCounterFontSize>
 			<gameListFontSize>0.03</gameListFontSize>
 			<mdLabelsFontSize>0.023</mdLabelsFontSize>
@@ -13,7 +13,7 @@
 
 	<fontSize name="large">
 		<variables>
-			<systemCarouselfontSize>0.062</systemCarouselFontSize>
+			<systemCarouselFontSize>0.062</systemCarouselFontSize>
 			<gameCounterFontSize>0.0394</gameCounterFontSize>
 			<gameListFontSize>0.034</gameListFontSize>
 			<mdLabelsFontSize>0.026</mdLabelsFontSize>
@@ -99,7 +99,7 @@
 			<unfocusedItemOpacity>0.5</unfocusedItemOpacity>
 			<pos>0 0.383796</pos>
 			<size>1 0.232407</size>
-			<fontSize>0.055</fontSize>
+			<fontSize>${systemCarouselFontSize}</fontSize>
 		</carousel>
 
 		<text name="gameCounter">
@@ -107,7 +107,7 @@
 			<pos>0.5 0.6437</pos>
 			<size>1 0.056</size>
 			<systemdata>gamecount</systemdata>
-			<fontSize>0.035</fontSize>
+			<fontSize>${gameCounterFontSize}</fontSize>
 			<horizontalAlignment>center</horizontalAlignment>
 			<backgroundColor>FFFFFFBB</backgroundColor>
 			<letterCase>uppercase</letterCase>
@@ -124,7 +124,7 @@
 				<secondaryColor>${secondaryColor}</secondaryColor>
 				<fontPath>${fontPath}</fontPath>
 				<horizontalMargin>0.01</horizontalMargin>
-				<fontSize>0.03</fontSize>
+				<fontSize>${gameListFontSize}</fontSize>
 				<pos>0.025 0.18</pos>
 			</textlist>
 
@@ -163,7 +163,7 @@
 				<color>${primaryColor}</color>
 				<fontPath>${fontPath}</fontPath>
 				<letterCase>none</letterCase>
-				<fontSize>0.023</fontSize>
+				<fontSize>${mdLabelsFontSize}</fontSize>
 				<zIndex>2</zIndex>
 				<defaultValue>:space:</defaultValue>
 			</text>
@@ -179,7 +179,7 @@
 				<color>${primaryColor}</color>
 				<letterCase>lowercase</letterCase>
 				<fontPath>${fontPath}</fontPath>
-				<fontSize>0.023</fontSize>
+				<fontSize${releaseDateFontSize}</fontSize>
 				<zIndex>2</zIndex>
 				<defaultValue>:space:</defaultValue>
 			</datetime>
