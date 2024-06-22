@@ -1,6 +1,12 @@
 <theme>
 	<include>./variables.xml</include>
 
+	<variables>
+		<fontPath>./assets/fonts/Cabin-Bold.ttf</fontPath>
+		<scrollSound>./assets/sounds/scroll.wav</scrollSound>
+		<systemLogo>./assets/img/system_logos/${system.theme}.svg</systemLogo>
+	</variables>
+
 	<fontSize name="medium">
 		<variables>
 			<systemCarouselFontSize>0.055</systemCarouselFontSize>
@@ -8,9 +14,17 @@
 			<gameListFontSize>0.03</gameListFontSize>
 			<mdLabelsFontSize>0.023</mdLabelsFontSize>
 			<releaseDateFontSize>0.023</releaseDateFontSize>
+			<releaseDatePos>0.615 0.63</releaseDatePos>
+			<genrePos>0.575 0.66</genrePos>
+			<developerPos>0.6 0.69</developerPos>
+			<playersPos>0.96 0.63</playersPos>
+			<releaseDateLabelPos>0.53 0.63</releaseDateLabelPos>
+			<genreLabelPos>0.53 0.66</genreLabelPos>
+			<developerLabelPos>0.53 0.69</developerLabelPos>
+			<playersLabelPos>0.91 0.63</playersLabelPos>
 		</variables>
 	</fontSize>
-
+	
 	<fontSize name="large">
 		<variables>
 			<systemCarouselFontSize>0.062</systemCarouselFontSize>
@@ -18,14 +32,16 @@
 			<gameListFontSize>0.034</gameListFontSize>
 			<mdLabelsFontSize>0.026</mdLabelsFontSize>
 			<releaseDateFontSize>0.026</releaseDateFontSize>
+			<releaseDatePos>0.623 0.63</releaseDatePos>
+			<genrePos>0.583 0.663</genrePos>
+			<developerPos>0.608 0.696</developerPos>
+			<playersPos>0.968 0.63</playersPos>
+			<releaseDateLabelPos>0.53 0.63</releaseDateLabelPos>
+			<genreLabelPos>0.53 0.663</genreLabelPos>
+			<developerLabelPos>0.53 0.696</developerLabelPos>
+			<playersLabelPos>0.91 0.63</playersLabelPos>
 		</variables>
 	</fontSize>
-
-	<variables>
-		<fontPath>./assets/fonts/Cabin-Bold.ttf</fontPath>
-		<scrollSound>./assets/sounds/scroll.wav</scrollSound>
-		<systemLogo>./assets/img/system_logos/${system.theme}.svg</systemLogo>
-	</variables>
 
 	<variant name="Basic">
 		<include>./variants/basic.xml</include>
@@ -170,49 +186,49 @@
 
 			<text name="md_lbl_releasedate">
 				<text>Release Date:</text>
-				<pos>0.53 0.63</pos>
+				<pos>${releaseDateLabelPos}</pos>
 			</text>
 
 			<datetime name="md_releasedate">
 				<metadata>releasedate</metadata>
-				<pos>0.615 0.63</pos>
+				<pos>${releaseDatePos}</pos>
 				<color>${primaryColor}</color>
 				<letterCase>lowercase</letterCase>
 				<fontPath>${fontPath}</fontPath>
-				<fontSize${releaseDateFontSize}</fontSize>
+				<fontSize>${releaseDateFontSize}</fontSize>
 				<zIndex>2</zIndex>
 				<defaultValue>:space:</defaultValue>
 			</datetime>
 
 			<text name="md_lbl_genre">
 				<text>Genre:</text>
-				<pos>0.53 0.66</pos>
+				<pos>${genreLabelPos}</pos>
 			</text>
 
 			<text name="md_genre">
 				<metadata>genre</metadata>
-				<pos>0.575 0.66</pos>
+				<pos>${genrePos}</pos>
 			</text>
 
 			<text name="md_lbl_developer">
 				<text>Developer:</text>
-				<pos>0.53 0.69</pos>
+				<pos>${developerLabelPos}</pos>
 			</text>
 
 			<text name="md_developer">
 				<metadata>developer</metadata>
-				<pos>0.6 0.69</pos>
+				<pos>${developerPos}</pos>
 				<size>0 0.033</size>
 			</text>
 
 			<text name="md_lbl_players">
 				<text>Players:</text>
-				<pos>0.91 0.63</pos>
+				<pos>${playersLabelPos}</pos>
 			</text>
 
 			<text name="md_players">
 				<metadata>players</metadata>
-				<pos>0.96 0.63</pos>
+				<pos>${playersPos}</pos>
 			</text>
 
 			<text name="md_description">
