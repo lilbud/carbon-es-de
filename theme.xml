@@ -1,6 +1,26 @@
 <theme>
 	<include>./variables.xml</include>
 
+	<fontSize name="medium">
+		<variables>
+			<systemCarouselfontSize>0.055</systemCarouselFontSize>
+			<gameCounterFontSize>0.035</gameCounterFontSize>
+			<gameListFontSize>0.03</gameListFontSize>
+			<mdLabelsFontSize>0.023</mdLabelsFontSize>
+			<releaseDateFontSize>0.023</releaseDateFontSize>
+		</variables>
+	</fontSize>
+
+	<fontSize name="large">
+		<variables>
+			<systemCarouselfontSize>0.062</systemCarouselFontSize>
+			<gameCounterFontSize>0.0394</gameCounterFontSize>
+			<gameListFontSize>0.034</gameListFontSize>
+			<mdLabelsFontSize>0.026</mdLabelsFontSize>
+			<releaseDateFontSize>0.026</releaseDateFontSize>
+		</variables>
+	</fontSize>
+
 	<variables>
 		<fontPath>./assets/fonts/Cabin-Bold.ttf</fontPath>
 		<scrollSound>./assets/sounds/scroll.wav</scrollSound>
