@@ -201,7 +201,7 @@
 			</datetime>
 
 			<text name="md_lbl_genre">
-				<text>Genre:</text>
+				<text>${langLabelGenre}</text>
 				<pos>${genreLabelPos}</pos>
 			</text>
 
@@ -211,7 +211,7 @@
 			</text>
 
 			<text name="md_lbl_developer">
-				<text>Developer:</text>
+				<text>${langLabelDeveloper}</text>
 				<pos>${developerLabelPos}</pos>
 			</text>
 
@@ -222,7 +222,7 @@
 			</text>
 
 			<text name="md_lbl_players">
-				<text>Players:</text>
+				<text>${langLabelPlayers}</text>
 				<pos>${playersLabelPos}</pos>
 			</text>
 

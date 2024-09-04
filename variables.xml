@@ -47,11 +47,13 @@
         </variables>
     </colorScheme>
 
-    <!-- <colorScheme name="red, blue, green, yellow, orange, purple, teal, pink"> -->
-        <variables>     
-            <selectorColor>1c1c1c</selectorColor>
-            <primaryColor>969696</primaryColor>
-            <secondaryColor>7a6161</secondaryColor>
-        </variables>
-    <!-- </colorScheme> -->
+    <variables>     
+        <selectorColor>1c1c1c</selectorColor>
+        <primaryColor>969696</primaryColor>
+        <secondaryColor>7a6161</secondaryColor>
+        <langLabelRating>Rating:</langLabelRating>
+        <langLabelPlayers>Players:</langLabelPlayers>
+        <langLabelGenre>Genre:</langLabelGenre>
+        <langLabelDeveloper>Developer:</langLabelDeveloper>
+    </variables>
 </theme>
